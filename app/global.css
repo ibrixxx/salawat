@@ -4,11 +4,18 @@
 
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
-    padding: 0 2rem;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('../public/saBack.jpg');
+    background-size: contain;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -20,7 +27,7 @@ a {
 
 main {
     min-height: 100vh;
-    padding: 1rem 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,7 +37,6 @@ main {
 input, textarea {
     display: block;
     max-width: 300px;
-    margin: 0.5rem 0;
 }
 
 button {
@@ -46,6 +52,52 @@ button {
 
 nav a {
     font-weight: bold;
-    margin: 0 0.5rem;
     text-decoration: underline;
+}
+
+#numbersDiv {
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+#text {
+    font-family: "Apple Chancery";
+    color: whitesmoke;
+}
+
+#data {
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 25%;
+    padding: 2rem;
+}
+
+#bigNumber {
+    color: navajowhite;
+    font-size: xxx-large;
+    font-weight: bolder;
+    font-family: "Kohinoor Telugu";
+    display: flex;
+    justify-content: center;
+}
+
+#mediumNumber {
+    color: navajowhite;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: "Kohinoor Telugu";
+    display: flex;
+    justify-content: center;
+}
+
+#smallNumber {
+    display: flex;
+    color: navajowhite;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: "Kohinoor Telugu";
+    justify-content: center;
 }

@@ -1,5 +1,7 @@
 import PocketBase from 'pocketbase';
+import GroupData from "./GroupData";
 const pb = new PocketBase('http://127.0.0.1:8090');
+import './global.css'
 
 export const dynamic = 'auto',
   dynamicParams = true,
@@ -14,13 +16,11 @@ const getData = async () => {
 
 const HomePage = async () => {
     const data = await getData()
+    const imageUrl = '../public/saBack.jpg'
 
     return (
-        <div>
-            <h1>HOme page</h1>
-            <h3>{data?.allSalawats}</h3>
-            <h3>{data?.salawatsPerDay}</h3>
-            <h3>{data?.groupMembers}</h3>
+        <div className={'boxing'}>
+            <GroupData data={data} />
         </div>
     )
 }
