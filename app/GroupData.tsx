@@ -22,7 +22,7 @@ const GroupData = ({data} : {data: any}) => {
                     </div>
                 </Stack>
                 <Stack style={{display: "flex", justifyContent: 'center', alignItems: 'center'}}>
-                    <h3 id={'text'}>Broj proučenih salavata na danas.</h3>
+                    <h3 id={'text'}>Broj proučenih salavata na dan.</h3>
                     <div id={'mediumNumber'}>
                         <CountUp end={data?.salawatsPerDay} duration={2} />
                     </div>
