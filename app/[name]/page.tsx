@@ -1,10 +1,10 @@
 import PocketBase from 'pocketbase';
 import UpdateData from "./UpdateData";
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase('https://joja.fly.dev');
 import '../global.css'
 
 const getData = async () => {
-    return await pb.collection('numbers').getOne('au4s1dq2cdczppi') as any
+    return await pb.collection('numbers').getOne('36e28qg9qkda4ws') as any
 }
 
 const AdminPage = async () => {

@@ -1,7 +1,7 @@
 'use client'
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase('https://joja.fly.dev');
 
 import {useState} from "react";
 import {Button, TextField} from "@mui/material";
@@ -17,7 +17,7 @@ const UpdateData = ({a, b, c}: {a: number, b: number, c: number}) => {
             "groupMembers": members,
             "allSalawats": allSalawats,
         };
-        await pb.collection('numbers').update('au4s1dq2cdczppi', data);
+        await pb.collection('numbers').update('36e28qg9qkda4ws', data);
     }
 
     return (

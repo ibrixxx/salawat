@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 import GroupData from "./GroupData";
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase('https://joja.fly.dev');
 import './global.css'
 
 export const dynamic = 'auto',
@@ -11,12 +11,11 @@ export const dynamic = 'auto',
   preferredRegion = 'auto'
 
 const getData = async () => {
-    return await pb.collection('numbers').getOne('au4s1dq2cdczppi') as any
+    return await pb.collection('numbers').getOne('36e28qg9qkda4ws') as any
 }
 
 const HomePage = async () => {
     const data = await getData()
-    const imageUrl = '../public/saBack.jpg'
 
     return (
         <div className={'boxing'}>
