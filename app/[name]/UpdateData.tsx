@@ -7,6 +7,7 @@ import {useState} from "react";
 import {Button, TextField} from "@mui/material";
 
 const UpdateData = ({a, b, c}: {a: number, b: number, c: number}) => {
+    const [visible, setVisible] = useState(false)
     const [salawats, setSalawats] = useState(a)
     const [allSalawats, setAllSalawats] = useState(c)
     const [members, setMembers] = useState(b)
@@ -17,7 +18,11 @@ const UpdateData = ({a, b, c}: {a: number, b: number, c: number}) => {
             "groupMembers": members,
             "allSalawats": allSalawats,
         };
-        await pb.collection('numbers').update('36e28qg9qkda4ws', data);
+        const res = await pb.collection('numbers').update('36e28qg9qkda4ws', data);
+        if(res.allSalawats){
+            setVisible(true)
+            setTimeout(() => setVisible(false), 3000)
+        }
     }
 
     return (
@@ -50,6 +55,7 @@ const UpdateData = ({a, b, c}: {a: number, b: number, c: number}) => {
                 onChange={e => setMembers(parseInt(e.target.value))}
             />
             <Button onClick={update} variant="contained">UPDATE</Button>
+            {visible ? <p style={{color: 'lightgreen', textAlign: 'center'}}>Podaci uspješno promijenjeni!</p> : null}
         </div>
     )
 }
